@@ -7,6 +7,12 @@ This repository contains the codes for DEMNet: Dual-Encoder-Decoder Multi-Frame 
 - tqbm
 - DCNv2
 - scikit-image
+- thop
+- skimage
+- numpy
+- matplotlib
+- PIL
+- scipy
 
 ## Datasets
 
