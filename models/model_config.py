@@ -11,8 +11,8 @@ import torch.nn as nn
 def model_chose(model, loss_func, SpatialDeepSup):
     num_classes = 1
     
-    if model =='DEMNet':  
-        net = DEMNet(num_classes=num_classes)   
+    if model =='WATP_DTUM_concat':  
+        net = WATP_DTUM_concat(num_classes=num_classes)     
     
     else:
         raise ValueError(f"Unsupported model: {model}")
@@ -35,7 +35,7 @@ def run_model(mode,net, model, SeqData, Old_Feat, OldFlag):
         input = SeqData.repeat(1, 3, 1, 1, 1)
         outputs,new_Old_Feat = net(input, Old_Feat, OldFlag)
 
-    elif model=='DEMNet' :
+    elif model=='WATP_DTUM_concat' :
         input = SeqData.repeat(1, 3, 1, 1, 1)
         outputs,new_Old_Feat = net(input, Old_Feat, OldFlag)
 
