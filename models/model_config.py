@@ -3,7 +3,7 @@ from thop import profile
 from thop import clever_format  
 import time 
 
-from models.model_DEMNet import DEMNet
+from models.model_WATP import WATP_DTUM_concat
 import torch.nn as nn
 
 
